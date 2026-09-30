@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-inner">
+
+        <div>
+
+            <span class="badge">
+                Generative AI Learning Assistant
+            </span>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                Ask questions, simplify concepts,
+                generate quizzes, summarize notes,
+                and build a personalized learning path.
+            </p>
+
+        </div>
+
+
+        <div
+            class="status"
+            id="status"
+        >
+            Checking AI service...
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- TASK SECTION -->
+
+    <section class="card">
+
+        <div class="task-grid">
+
+            <button
+                class="task active"
+                data-task="qa"
+            >
+                💬 Q&amp;A
+            </button>
+
+
+            <button
+                class="task"
+                data-task="explain"
+            >
+                💡 Explain
+            </button>
+
+
+            <button
+                class="task"
+                data-task="quiz"
+            >
+                🧠 Quiz
+            </button>
+
+
+            <button
+                class="task"
+                data-task="summarize"
+            >
+                📝 Summary
+            </button>
+
+
+            <button
+                class="task"
+                data-task="learn"
+            >
+                🗺️ Learning Path
+            </button>
+
+        </div>
+
+
+        <div class="form-area">
+
+            <label
+                id="inputLabel"
+                for="inputText"
+            >
+                Ask a question
+            </label>
+
+
+            <textarea
+                id="inputText"
+                placeholder="Example: Explain the difference between RAM and ROM."
+            ></textarea>
+
+
+            <div
+                class="options"
+                id="options"
+            >
+
+                <div id="levelContainer">
+
+                    <label for="level">
+                        Learner level
+                    </label>
+
+                    <select id="level">
+
+                        <option value="beginner">
+                            Beginner
+                        </option>
+
+                        <option value="intermediate">
+                            Intermediate
+                        </option>
+
+                        <option value="advanced">
+                            Advanced
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="weeksContainer">
+
+                    <label for="weeks">
+                        Weeks
+                    </label>
+
+                    <input
+                        id="weeks"
+                        type="number"
+                        min="1"
+                        max="24"
+                        value="4"
+                    >
+
+                </div>
+
+
+                <div id="countContainer">
+
+                    <label for="count">
+                        Quiz questions
+                    </label>
+
+                    <input
+                        id="count"
+                        type="number"
+                        min="1"
+                        max="10"
+                        value="3"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary"
+                id="submitBtn"
+            >
+                Generate Answer
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+
+    <section class="card result-card">
+
+        <div class="result-head">
+
+            <h2>
+                Result
+            </h2>
+
+            <button
+                class="secondary"
+                id="copyBtn"
+                disabled
+            >
+                Copy
+            </button>
+
+        </div>
+
+
+        <div
+            id="result"
+            class="result muted"
+        >
+            Your AI-generated result
+            will appear here.
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    EduGenie
+    •
+    FastAPI
+    +
+    Google Gemini
+    •
+    Built for learning
+
+</footer>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
